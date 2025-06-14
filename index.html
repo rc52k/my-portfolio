@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>My Portfolio</title>
+		<style>
+		* {
+		font-family: helvetica;
+		box-sizing: border-box;
+		}
+		html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		scroll-behavior: smooth;
+		}
+		img{
+		max-width: 100%;
+		}
+		#pfp {
+		padding-top: 8px;
+		padding-left: 0px;
+		padding-right: 5px;
+		height: 28px;
+		}
+		.nodesign{
+		text-decoration: none;
+		color: inherit;
+		}
+		a{
+		color: white;
+		background-color: transparent;
+		text-decoration: none;
+		}
+		div.top{
+		position: fixed;
+		color: white;
+		text-decoration: none; 
+		font-weight: bolder;
+		font-size: 20px;
+		height: 10vh;
+		width: 100%;
+		background-color: #111827;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		z-index: 2;
+		}
+		div.leftside{
+		word-spacing: 50px;
+		}
+		div.rightside{
+		}
+		div.header{
+		text-align: center;
+		height: auto;
+		padding-top: 2%;
+		}
+		p.header{
+		font-size: clamp(3vh, 18vh, 23vh);
+		word-spacing: 10px;
+		}
+		div.intro{
+		display: flex;
+		height: auto;
+		width: auto;
+		align-items: center;
+		}
+		div.image{
+		width: 150%;
+		margin-left: 10%;
+		}
+		#me{
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 100%;
+		}
+		div.maintext{
+		padding: 2% 9% 0%;
+		}
+		p.maintext{
+		font-size: clamp(2vw, 2.5vw, 3vw);
+		line-height: 6vh;
+		}
+		div.works{
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: auto;
+		background-image: url('grad.jpg');
+		background-repeat: repeat-x;
+		background-size: 100% 100%;
+		margin-top: 2%;
+		padding-bottom: 5%;
+		overflow: hidden;
+		}
+		div.worksheader{
+		padding: 5%;
+		text-align: center;
+		}
+		div.playlist{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		}
+		div.playlist div{
+		background-color: #121212;
+		line-height: 9px;
+		}
+		div.playlist p{
+		color: white;
+		text-align: left;
+		}
+		div.topsection{
+		display: flex;
+		height: auto;
+		width: auto;
+		}
+		div.cphoto-container{
+		padding: 2% 2%;
+		height: 5%;
+		width: 60%
+		}
+		.cphoto{
+		object-fit: cover;
+		}
+		div.rightcover{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		width: auto;
+		}
+		div.label{
+		display: flex;
+		align-items: center;
+		height: 5vh;
+		width: auto;
+		float: left;
+		color: white;
+		}
+		p.label{
+		font-size: 15px;
+		object-fit: cover;
+		}
+		div.title{
+		height: auto;
+		width: auto;
+		color: white;
+		clear: left;
+		}
+		p.title{
+		font-size: 50px;
+		font-weight: bold;
+		}
+		div.profile{
+		display: flex;
+		align-items: center;
+		}
+		div.cover{
+		float: left;
+		padding-right: 2%;
+		}
+		div.user{
+		font-size: 11px;
+		top: 5px;
+		color: white;
+		position: relative;
+		z-index: 1;
+		}
+		div.bottomsection{
+		display: flex;
+		flex-direction: column;
+		clear: left;
+		}
+		div.line{
+		display: flex;
+		font-size: 15px;
+		padding-left: 3%;
+		}
+		div.song{
+		display: flex;
+		align-items: center;
+		}
+		div.songcover{
+		display: flex;
+		align-items: center;
+		height: 7vh;
+		width: 7vh;
+		padding-left: 15%;
+		float: left;
+		}
+		img.songphoto{
+		object-fit: cover;
+		border-radius: 20%;
+		}
+		div.songdescr{
+		display: flex;
+		flex-direction: column;
+		color: white;
+		font-size: 13px;
+		letter-spacing: 0.2px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		}
+		div.songlabel{
+		padding-top: 9px;
+		padding-bottom: 3px;	
+		}
+		div.songartist{
+		padding-top: 4px;
+		color: #C1BDCE;
+		}
+		div.pl1{
+		height: 315px;
+		width: 300px;
+		margin: 15px;
+		border: 1px solid;
+		overflow: hidden;
+		}
+		div.pl2{
+		height: 315px;
+		width: 300px;
+		border: 1px solid;
+		overflow: hidden;
+		}
+		div.pl3{
+		height: 315px;
+		width: 300px;
+		margin: 15px;
+		border: 1px solid;
+		overflow: hidden;
+		}
+		div.pl4{
+		height: 315px;
+		width: 300px;
+		margin: 15px;
+		border: 1px solid;
+		overflow: hidden;
+		}
+		div.pl5{
+		height: 315px;
+		width: 300px;
+		margin: 15px;
+		border: 1px solid;
+		overflow: hidden;
+		}
+		div.pl6{
+		height: 315px;
+		width: 300px;
+		margin: 15px;
+		border: 1px solid;
+		overflow: hidden;
+		}
+		div.projects{
+		padding: 1% 2%;
+		}
+		div.projectsHeader{
+		font-size: 50px;
+		}
+		div.bottomDescription{
+		padding-bottom: 20px;
+		font-size: 35px;
+		font-weight: 300;
+		width: 70%;
+		}
+		div.projectsTab{
+		height: auto;
+		width: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		}
+		div.projectDisplay{
+		background-color: #8CC0FC;
+		height: 400px;
+		width: 320px;
+		border-radius: 8%;
+		overflow: hidden;
+		margin: 2% 3%;
+		}
+		div.projectDisplay1{
+		background-color: #C1B1FD;
+		height: 400px;
+		width: 320px;
+		border-radius: 8%;
+		overflow: hidden;
+		margin: 2% 3%;
+		}
+		div.projectDisplay2{
+		background-color: #67E4B3;
+		height: 400px;
+		width: 320px;
+		border-radius: 8%;
+		overflow: hidden;
+		margin: 2% 3%;
+		}
+		div.projectDisplay3{
+		background-color: #EB6E51;
+		height: 400px;
+		width: 320px;
+		border-radius: 8%;
+		overflow: hidden;
+		margin: 2% 3%;
+		}
+		div.projectDisplay4{
+		background-color: #B531BF;
+		height: 400px;
+		width: 320px;
+		border-radius: 8%;
+		overflow: hidden;
+		margin: 2% 3%;
+		}
+		.projectimage{
+		object-fit: cover;
+		height: 30vh;
+		width: 100%;
+		}
+		.projectDetails{
+		font-size: 16px;
+		font-weight: 500;
+		padding: 0% 5% 10% 5%;
+		}
+		h3{
+		font-size: 26px;
+		}	
+		div.aboutmepage{
+		display: flex;
+		flex-direction: row-reverse;
+		margin-top: 10%;
+		height: 100%;
+		width: 100%;
+		border: 1px solid;
+		overflow: hidden;
+		}
+		div.image2{
+		height: 50%;
+		width: 30%;
+		float: right;
+		}
+		#aboutme{
+		border-radius: 30%;
+		object-fit: cover;
+		}
+		div.aboutme-description{
+		width: 60%;
+		padding-right: 8%;
+		border: 1px solid;
+		font-size: 18px;
+		}
+		div.contactpage{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		}
+		div.contact-header{
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		font-size: 6vh;
+		}
+		h1.contact{
+		}
+		div.contactpage-bottom{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		}
+		div.form{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		width: 80%;
+		padding: 1% 2%;
+		background-color: #111827;
+		border-radius: 15px;
+		}
+		div.labelform{
+		width: auto;
+		height: auto;
+		margin: 1%;
+		}
+		label{
+		object-fit: cover;
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		}
+		input[type=text]{
+		padding: 2%;
+		border-radius: 10px;
+		width: 100%;
+		margin-bottom: 2%;
+		}
+		input[type=email]{
+		padding: 2%;
+		width: 100%;
+		margin-bottom: 2%;
+		border-radius: 10px;
+		}
+		input[placeholder]{
+		font-weight: bold;
+		font-size: 20px;
+		}
+		div.message{
+		}
+		textarea{
+		width: 100%;
+		}
+		textarea[type=text]{
+		padding: 2%;
+		border-radius: 10px;
+		}
+		textarea[placeholder]{
+		font-weight: bold;
+		font-size: 20px;
+		}	
+		#textarea{
+		padding-bottom: 40%;
+		}		
+		.submit{
+		border-radius: 8px;
+		width: 20%;
+		padding: 2%;
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		background-color: #111827;
+		border: 2px solid white;
+		}
+		</style>
+	</head>
+	<body>
+		<div class ="top">
+			<div class ="leftside">
+				<a href="#home">Home</a>
+				<a href="#works">Projects</a>
+				<span style="word-spacing:3px;"><a href="main/aboutme.html">About Me</a></span>
+			</div>
+			<div class = "rightside">
+				<a href ="#contacts">Contacts</a>
+			</div>
+		</div>
+		<div class ="header" id="home">
+			<p class ="header">
+				I'm Keith
+			</p>
+		</div>
+		<div class ="intro">
+			<div class ="image">
+				<img src="main/me.jpg" id ="me">
+			</div>
+			<div class ="maintext"> 
+				<p class ="maintext">
+					A music and film lover, a Computer Science student, and a highly motivated and adaptable individual 
+					with a strong foundation in science, technology, and leadership. I have experience in coding with C++, HTML, and CSS.
+					Here, you can check out what I'm <a href ="#works" style ="color:black; text-decoration: underline;">working</a> on!
+				</p>
+			</div>
+		</div>
+		<br>
+		<div class ="works">
+			<div class ="worksheader">
+				<h1 style ="font-size:50px; color:white;">Featured Works</h1>
+				<p style="font-size:20px; color:white; padding-top: 20px;">My Top Playlists</p>
+			</div>
+			<div class="playlist">
+				<a href ="https://open.spotify.com/playlist/3hJClQwGGxrerNqpn5jle1?si=nYlOMFy1ScuQY4DmOeM-rQ" class ="nodesign" target ="_blank">
+					<div class="pl1">
+						<div class ="topsection">
+							<div class ="cphoto-container">
+							<img src ="main/playlist1/pl1.png" class ="cphoto">
+							</div>
+								<div class ="rightcover">
+									<div class ="label">
+										<p class ="label">Public Playlist</p>
+										<br>
+									</div>
+									<div class ="title">
+										<p class ="title">ゆめ</p>
+									</div>
+									<div class ="profile">
+										<div class ="cover">
+											<img src ="main/pfp.png" id="pfp">
+										</div>
+										<div class ="user">
+											とととと
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class ="bottomsection">
+							<div class ="line">
+									<div class ="song">
+										<p>1.</p>
+										<div class ="songcover">
+											<img src ="main/playlist1/isabella.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											イザベラの子守唄
+										</div>
+										<div class ="songartist">
+											Takahiro Obata
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>2.</p>
+										<div class ="songcover">
+											<img src ="main/playlist1/orange.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											オレンジ 
+										</div>
+										<div class ="songartist">
+											7!!
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>3.</p>
+										<div class ="songcover">
+											<img src ="main/playlist1/yui.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											again
+										</div>
+										<div class ="songartist">
+											YUI
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href ="https://open.spotify.com/playlist/6IufXyq2qM4kdqtDpfalN7?si=cwUPcDB_R0CHXIrL8xy7yw" class ="nodesign" target ="_blank">
+					<div class="pl2">
+						<div class ="topsection">
+							<div class ="cphoto-container">
+							<img src ="main/playlist2/pl2.png" class ="cphoto">
+							</div>	
+								<div class ="rightcover">
+									<div class ="label">
+										<p class ="label">Public Playlist</p>
+										<br>
+									</div>
+									<div class ="title">
+										<p class ="title">bop</p>
+									</div>
+									<div class ="profile">
+										<div class ="cover">
+											<img src ="main/pfp.png" id="pfp">
+										</div>
+										<div class ="user">
+											とととと
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class ="bottomsection">
+							<div class ="line">
+									<div class ="song">
+										<p>1.</p>
+										<div class ="songcover">
+											<img src ="main/playlist2/hooked.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Hooked On A Feeling
+										</div>
+										<div class ="songartist">
+											Blue Swede, Björn Skifs
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>2.</p>
+										<div class ="songcover">
+											<img src ="main/playlist2/heart.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Can You Feel My Heart 
+										</div>
+										<div class ="songartist">
+											Bring Me The Horizon
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>3.</p>
+										<div class ="songcover">
+											<img src ="main/playlist2/undertale.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Megalovania
+										</div>
+										<div class ="songartist">
+											Toby Fox
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href ="https://open.spotify.com/playlist/2KdWUfD7ljBnmSGIPt52K3?si=218734f1f0f84685&pt=a649953ee6840fe2412cbe3841424ca4" class ="nodesign" target ="_blank">
+					<div class="pl3">
+						<div class ="topsection">
+						<div class ="cphoto-container">
+							<img src ="main/playlist3/pl3.png" class ="cphoto">
+						</div>		
+								<div class ="rightcover">
+									<div class ="label">
+										<p class ="label">Public Playlist</p>
+										<br>
+									</div>
+									<div class ="title">
+										<p class ="title">2x</p>
+									</div>
+									<div class ="main/profile">
+										<div class ="cover">
+											<img src ="pfp.png" id="pfp">
+										</div>
+										<div class ="user">
+											とととと
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class ="bottomsection">
+							<div class ="line">
+									<div class ="song">
+										<p>1.</p>
+										<div class ="songcover">
+											<img src ="main/playlist3/more.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											MORE & MORE
+										</div>
+										<div class ="songartist">
+											TWICE
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>2.</p>
+										<div class ="songcover">
+											<img src ="main/playlist3/like.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Like Ooh-Ahh 
+										</div>
+										<div class ="songartist">
+											TWICE
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>3.</p>
+										<div class ="songcover">
+											<img src ="main/playlist3/tt.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											TT
+										</div>
+										<div class ="songartist">
+											TWICE
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</a>	
+				<a href ="https://open.spotify.com/playlist/6DANkQRPdHmzz0WmVzfhn3?si=kuFfFVe6QX2jr7KLBssDTQ" class ="nodesign" target ="_blank">
+					<div class="pl4">
+						<div class ="topsection">
+						<div class ="cphoto-container">
+							<img src ="main/playlist4/pl4.png" class ="cphoto">
+						</div>		
+								<div class ="rightcover">
+									<div class ="label">
+										<p class ="label">Public Playlist</p>
+										<br>
+									</div>
+									<div class ="title">
+										<p class ="title">str</p>
+									</div>
+									<div class ="profile">
+										<div class ="cover">
+											<img src ="main/pfp.png" id="pfp">
+										</div>
+										<div class ="user">
+											とととと
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class ="bottomsection">
+							<div class ="line">
+									<div class ="song">
+										<p>1.</p>
+										<div class ="songcover">
+											<img src ="main/playlist4/trust.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Trust Me (MIDZY)
+										</div>
+										<div class ="songartist">
+											ITZY
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>2.</p>
+										<div class ="songcover">
+											<img src ="main/playlist4/malibu.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Malibu Nights
+										</div>
+										<div class ="songartist">
+											LANY
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>3.</p>
+										<div class ="songcover">
+											<img src ="main/playlist4/hindi.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Hindi Tayo Pwede
+										</div>
+										<div class ="songartist">
+											The Juans
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href ="https://open.spotify.com/playlist/6WxAPMYDjBOnlaSeuDTu4O?si=XRBxMLxYTq2g7O67t1SV6A" class ="nodesign" target ="_blank">
+					<div class="pl5">
+						<div class ="topsection">
+						<div class ="cphoto-container">
+							<img src ="main/playlist5/pl5.png" class ="cphoto">
+						</div>		
+								<div class ="rightcover">
+									<div class ="label">
+										<p class ="label">Public Playlist</p>
+										<br>
+									</div>
+									<div class ="title">
+										<p class ="title">初恋</p>
+									</div>
+									<div class ="profile">
+										<div class ="cover">
+											<img src ="main/pfp.png" id="pfp">
+										</div>
+										<div class ="user">
+											とととと
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class ="bottomsection">
+							<div class ="line">
+									<div class ="song">
+										<p>1.</p>
+										<div class ="songcover">
+											<img src ="main/playlist5/every.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Every Day, Every Moment
+										</div>
+										<div class ="songartist">
+											Paul Kim
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>2.</p>
+										<div class ="songcover">
+											<img src ="main/playlist5/jannabi.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											for lovers who hesitate
+										</div>
+										<div class ="songartist">
+											JANNABI
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>3.</p>
+										<div class ="songcover">
+											<img src ="main/playlist5/autumn.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											A thought on an autumn night
+										</div>
+										<div class ="songartist">
+											JANNABI
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href ="https://open.spotify.com/playlist/7cASOnndd8kxvQrQ2jOoAU?si=405af608d63c4972&pt=4601b898e0e268321a162ad6b8912042" class ="nodesign" target ="_blank">
+					<div class="pl6">
+						<div class ="topsection">
+						<div class ="cphoto-container">
+							<img src ="main/playlist6/pl6.png" class ="cphoto">
+						</div>		
+								<div class ="rightcover">
+									<div class ="label">
+										<p class ="label">Public Playlist</p>
+									</div>
+									<div class ="title">
+										<p class ="title">徴</p>
+									</div>
+									<div class ="profile">
+										<div class ="cover">
+											<img src ="main/pfp.png" id="pfp">
+										</div>
+										<div class ="user">
+											とととと
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class ="bottomsection">
+							<div class ="line">
+									<div class ="song">
+										<p>1.</p>
+										<div class ="songcover">
+											<img src ="main/playlist6/eva.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											KOMM, SUSSER TOD - M-1...
+										</div>
+										<div class ="songartist">
+											Arianne
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>2.</p>
+										<div class ="songcover">
+											<img src ="main/playlist6/home.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											This Is Home
+										</div>
+										<div class ="songartist">
+											Cavetown
+										</div>
+									</div>
+							</div>
+							<div class ="line">
+									<div class ="song">
+										<p>3.</p>
+										<div class ="songcover">
+											<img src ="main/playlist6/dealer.png" class ="songphoto">
+										</div>
+									</div>
+									<div class ="songdescr">
+										<div class ="songlabel">
+											Dealer
+										</div>
+										<div class ="songartist">
+											Lana Del Rey
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class ="projects" id ="works">
+			<div class ="projectsHeader">
+				<h1>My Projects</h1>
+			</div>
+			<div class ="bottomDescription">
+				<p>I love to create playlists and videos! You can view some of my favorite projects below.</p>
+			</div>
+			
+			<div class ="projectsTab">
+					<div class ="projectDisplay">
+						<iframe src ="https://www.youtube.com/embed/8d-fcd-VpAM" frameborder="0" allowfullscreen class ="projectimage">
+						</iframe>
+						<div class ="projectDetails">
+							<h3>Copernican Revolution</h3>
+							<p>This is my school project, a short film based on the Copernican Revolution for my STS course where
+							 I have done the cinematography, direction, script and editing.</p>
+						</div>
+					</div>
+					<div class ="projectDisplay1">
+						<iframe src ="https://www.youtube.com/embed/hMLj73vlYNI" frameborder="0" allowfullscreen class ="projectimage">
+						</iframe>
+						<div class ="projectDetails">
+							<h3>Dalumat Vlog</h3>
+							<p>This is a school vlog project about new Filipino words and slang. I did the filming 
+							and editing while learning more about language and content creation.</p>
+						</div>
+					</div>
+					<div class ="projectDisplay2">
+						<iframe src ="https://www.youtube.com/embed/3KKjkwN1DMA" frameborder="0" allowfullscreen class ="projectimage">
+						</iframe>
+						<div class ="projectDetails">
+							<h3>Air Pressure Expirement</h3>
+							<p>This is a school project video demonstrating an experiment on air pressure. 
+							It was created as part of our science lesson, and I handled both the setup and video presentation.</p>
+						</div>
+					</div>
+					<div class ="projectDisplay3">
+						<iframe src ="https://www.youtube.com/embed/YcWGUCf-3Jk" frameborder="0" allowfullscreen class ="projectimage">
+						</iframe>
+						<div class ="projectDetails">
+							<h3>Tayo</h3>
+							<p>This is a school project video campaign entitled “Tayo,” which aims to promote unity and 
+							collective action among people.</p>
+						</div>
+					</div>
+				<div class ="projectDisplay4">
+					<iframe src ="https://www.youtube.com/embed/WF2ClatJUA8" frameborder="0" allowfullscreen class ="projectimage">
+					</iframe>
+					<div class ="projectDetails">
+						<h3>Chaos</h3>
+						<p>This is a short film entitled “Chaos,” created as a school project to raise awareness 
+						about mental health struggles among students.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class ="contact-header">
+			<h1 style ="contact" id ="contacts">Contact Me</h1>
+		</div>
+		<div class ="contactpage">
+			<div class ="contactpage-bottom">
+				<div class ="form">
+					<form>
+					<div class ="labelform">
+						<label>Your Name</label>
+					</div>
+					<div class ="name">
+						<input type ="text" placeholder ="Enter Name"></input>
+					</div>
+					<div class ="labelform">
+						<label for="email">Your Email</label>
+					</div>
+					<div class ="name">
+						<input type ="email" placeholder ="Enter Email"></input>
+					</div>
+					<div class ="labelform">
+						<label>Your Message</label>
+					</div>
+					<div class ="message">
+						<textarea type ="text" placeholder ="Enter Message" id ="textarea"></textarea>
+					</div>
+					<div class ="message">
+						<input type ="submit" class ="submit" value ="Contact Me"></input>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
