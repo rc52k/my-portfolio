@@ -37,13 +37,14 @@
 		color: white;
 		text-decoration: none; 
 		font-weight: bolder;
-		font-size: 20px;
-		height: 10vh;
+		font-size: clamp(13px,20px,20px);
+		height: auto;
+		padding: 20px 100px;
 		width: 100%;
 		background-color: #111827;
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-between;
 		z-index: 2;
 		}
 		div.leftside{
@@ -57,7 +58,7 @@
 		padding-top: 2%;
 		}
 		p.header{
-		font-size: clamp(3vh, 18vh, 23vh);
+		font-size: clamp(8vh, 12vh, 15vh);
 		word-spacing: 10px;
 		}
 		div.intro{
@@ -90,7 +91,7 @@
 		align-items: center;
 		justify-content: center;
 		height: auto;
-		background-image: url('grad.jpg');
+		background-image: url('main/grad.jpg');
 		background-repeat: repeat-x;
 		background-size: 100% 100%;
 		margin-top: 2%;
@@ -260,11 +261,11 @@
 		padding: 1% 2%;
 		}
 		div.projectsHeader{
-		font-size: 50px;
+		font-size: clamp(5vh,9vh,12vh);
 		}
 		div.bottomDescription{
 		padding-bottom: 20px;
-		font-size: 35px;
+		font-size: clamp(3vh,5vh,7vh);
 		font-weight: 300;
 		width: 70%;
 		}
@@ -364,7 +365,7 @@
 		align-items: center;
 		justify-content: center;
 		margin: auto;
-		font-size: 6vh;
+		font-size: clamp(3vh,6vh,9vh);
 		}
 		h1.contact{
 		}
@@ -641,7 +642,7 @@
 									</div>
 									<div class ="main/profile">
 										<div class ="cover">
-											<img src ="pfp.png" id="pfp">
+											<img src ="main/pfp.png" id="pfp">
 										</div>
 										<div class ="user">
 											とととと
