@@ -18,10 +18,9 @@
 		max-width: 100%;
 		}
 		#pfp {
-		padding-top: 8px;
-		padding-left: 0px;
-		padding-right: 5px;
-		height: 28px;
+		padding-top: 0.5rem;
+		padding-right: 0.3125rem;
+		height: 1.75rem;
 		}
 		.nodesign{
 		text-decoration: none;
@@ -37,9 +36,8 @@
 		color: white;
 		text-decoration: none; 
 		font-weight: bolder;
-		font-size: clamp(13px,20px,20px);
-		height: auto;
-		padding: 20px 100px;
+		font-size: clamp(0.8125rem, 1.50vw, 1.50rem);
+		padding: 1.25rem 6.25rem;
 		width: 100%;
 		background-color: #111827;
 		display: flex;
@@ -203,68 +201,35 @@
 		display: flex;
 		flex-direction: column;
 		color: white;
-		font-size: 13px;
+		font-size: 0.8125rem;
 		letter-spacing: 0.2px;
 		padding-bottom: 10px;
 		padding-left: 10px;
 		}
 		div.songlabel{
-		padding-top: 9px;
-		padding-bottom: 3px;	
+		padding-top: 0.5625rem;
+		padding-bottom: 0.1875rem;	
 		}
 		div.songartist{
-		padding-top: 4px;
+		padding-top: 0.25rem;
 		color: #C1BDCE;
 		}
-		div.pl1{
-		height: 315px;
-		width: 300px;
-		margin: 15px;
+		div.pl1, div.pl2, div.pl3, div.pl4, div.pl5, div.pl6{
+		height: 20rem;
+		width: 18.75rem;
+		margin: 0.9375rem;
 		border: 1px solid;
 		overflow: hidden;
 		}
-		div.pl2{
-		height: 315px;
-		width: 300px;
-		border: 1px solid;
-		overflow: hidden;
-		}
-		div.pl3{
-		height: 315px;
-		width: 300px;
-		margin: 15px;
-		border: 1px solid;
-		overflow: hidden;
-		}
-		div.pl4{
-		height: 315px;
-		width: 300px;
-		margin: 15px;
-		border: 1px solid;
-		overflow: hidden;
-		}
-		div.pl5{
-		height: 315px;
-		width: 300px;
-		margin: 15px;
-		border: 1px solid;
-		overflow: hidden;
-		}
-		div.pl6{
-		height: 315px;
-		width: 300px;
-		margin: 15px;
-		border: 1px solid;
-		overflow: hidden;
-		}
+		
 		div.projects{
 		padding: 1% 2%;
 		}
 		div.projectsHeader{
-		font-size: clamp(5vh,9vh,12vh);
+		font-size: clamp(3vh,9vh,12vh);
 		}
 		div.bottomDescription{
-		padding-bottom: 20px;
+		padding-bottom: 1.25rem;
 		font-size: clamp(3vh,5vh,7vh);
 		font-weight: 300;
 		width: 70%;
@@ -277,45 +242,25 @@
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		}
-		div.projectDisplay{
+		div.projectDisplay, div.projectDisplay1, div.projectDisplay2, div.projectDisplay3, div.projectDisplay4{
 		background-color: #8CC0FC;
-		height: 400px;
-		width: 320px;
+		height: 25rem;
+		width: 20rem;
 		border-radius: 8%;
 		overflow: hidden;
 		margin: 2% 3%;
 		}
 		div.projectDisplay1{
 		background-color: #C1B1FD;
-		height: 400px;
-		width: 320px;
-		border-radius: 8%;
-		overflow: hidden;
-		margin: 2% 3%;
 		}
 		div.projectDisplay2{
 		background-color: #67E4B3;
-		height: 400px;
-		width: 320px;
-		border-radius: 8%;
-		overflow: hidden;
-		margin: 2% 3%;
 		}
 		div.projectDisplay3{
 		background-color: #EB6E51;
-		height: 400px;
-		width: 320px;
-		border-radius: 8%;
-		overflow: hidden;
-		margin: 2% 3%;
 		}
 		div.projectDisplay4{
 		background-color: #B531BF;
-		height: 400px;
-		width: 320px;
-		border-radius: 8%;
-		overflow: hidden;
-		margin: 2% 3%;
 		}
 		.projectimage{
 		object-fit: cover;
@@ -323,12 +268,12 @@
 		width: 100%;
 		}
 		.projectDetails{
-		font-size: 16px;
+		font-size: 1rem;
 		font-weight: 500;
 		padding: 0% 5% 10% 5%;
 		}
 		h3{
-		font-size: 26px;
+		font-size: 1.625rem;
 		}	
 		div.aboutmepage{
 		display: flex;
@@ -352,13 +297,14 @@
 		width: 60%;
 		padding-right: 8%;
 		border: 1px solid;
-		font-size: 18px;
+		font-size: 1.125rem;
 		}
 		div.contactpage{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		margin: 0.5rem;
 		}
 		div.contact-header{
 		display:flex;
@@ -391,7 +337,7 @@
 		}
 		label{
 		object-fit: cover;
-		font-size: 20px;
+		font-size: 1.25rem;
 		font-weight: bold;
 		color: white;
 		}
@@ -426,16 +372,40 @@
 		}	
 		#textarea{
 		padding-bottom: 40%;
-		}		
+		}
 		.submit{
+		display: inline-block;
 		border-radius: 8px;
-		width: 20%;
 		padding: 2%;
 		color: white;
-		font-size: 20px;
+		font-size: 1.25rem;
 		font-weight: bold;
 		background-color: #111827;
 		border: 2px solid white;
+		}
+		div.socialmedia{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+		height: auto;
+		width: auto;
+		font-size: 0.7rem;
+		}
+		div.links{
+		display: inline-block;
+		align-items: center;
+		justify-content: center;
+		border-radius: 20%;
+		border: 1px solid;
+		color: black;
+		padding: 0.3rem 2rem;
+		overflow: hidden;
+		background-color: #67E4B3;
+		}
+		p.links{
+		display: inline-block;
+		font-weight: bold;
 		}
 		</style>
 	</head>
@@ -1018,6 +988,18 @@
 					</form>
 				</div>
 			</div>
+		</div>
+		<div class ="socialmedia">
+			<a href ="https://www.facebook.com/kitkitryan" target ="_blank">
+				<div class ="links">
+					<p class ="links">Facebook</p>
+				</div>
+			</a>
+			<a href ="https://www.instagram.com/kitkit.ryan/" target ="_blank">
+				<div class ="links">
+					<p class ="links">Instagram</p>
+				</div>
+			</a>
 		</div>
 	</body>
 </html>
