@@ -1,603 +1,500 @@
-	<!DOCTYPE html>
-	<html>
-		<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>About Me</title>
-			<style>
-			* {
-			font-family: helvetica, sans-serif;
-			box-sizing: border-box;
-			}
-			
-			html, body {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			scroll-behavior: smooth;
-			}
-			
-			img{
-			max-width: 100%;
-			}
-			
-			.nodesign{
-			text-decoration: none;
-			color: inherit;
-			}
-			
-			a{
-			color: white;
-			background-color: transparent;
-			text-decoration: none;
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-			div.top{
-			position: fixed;
-			color: white;
-			text-decoration: none; 
-			font-weight: bolder;
-			font-size: clamp(0.8125rem, 1.50vw, 1.50rem);
-			padding: 1.25rem 6.25rem;
-			width: 100%;
-			background-color: #111827;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			z-index: 2;
-			}
-			
-			div.leftside{
-			word-spacing: 2rem;
-			}
-			
-			div.rightside{
-			}
-			
-			div.header{
-			text-align: center;
-			font-size: 37.5rem;
-			word-spacing: 10px;
-			height: 50%;
-			padding-top: 6%;
-			}
-			
-			div.aboutmepage{
-			display: flex;
-			flex-direction: row-reverse;
-			overflow: hidden;
-			}
-			
-			div.image2{
-			max-height: 100vh;
-			max-width: 50%;
-			float: right;
-			padding-top: 3rem;
-			padding-right: 5vw;
-			}
-			
-			#aboutme {
-			width: 100%;
-			height: auto;
-			object-fit: contain;
-			}
-			
-			div.aboutme-description{
-			width: 60%;
-			padding: 5% 5%;
-			font-size: 26px;
-			}
-			
-			p.small{
-			font-size: 20px;
-			}
-			
-			p.medium{
-			font-size: 3vh;
-			font-weight: bold;
-			}
-			
-			div.achievements-container{
-			display: flex;
-			width: auto;
-			height: auto;
-			flex-direction: column;
-			padding: 5% 0% 10% 10%;
-			background-color: #1E1E1E;
-			color: white;
-			}
-			
-			div.achievements-header{
-			color: white;
-			font-weight: bold;
-			font-size: clamp(3vh,10vh,16vh);
-			padding: 1% 0%;
-			}
-			
-			#achievements{
-			padding: 6% 0%;
-			}
-			
-			p.achievements-header{
-			font-size: clamp(1vh,4vh,10vh);
-			}
-			
-			div.descr-container{
-			display: flex;
-			flex-direction: column;
-			box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-			padding: 5% 5%;
-			height: auto;
-			width: 80%;
-			}
-			
-			div.descr-header{
-			height: 100%;
-			width: 100%;
-			padding: 1% 3%;
-			margin-bottom: 1%;
-			}
-			
-			div.award-header{
-			display: flex;
-			align-items: center;
-			height: auto;
-			margin-bottom: 1%;
-			line-height: 5vh;
-			}
+    html {
+      scroll-behavior: smooth;
+    }
 
-			div.body-container{
-			height: auto;
-			width: 100%;
-			padding: 1% 0%;
-			background-color: #3E3E3E;
-			line-height: 5vh;
-			box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-			}
-			
-			p.tahoma{
-			font-family: sans-serif;
-			font-size: 20px;
-			font-weight: bold;
-			}
-			
-			p.subhead{
-			font-weight: bold;
-			}
-			
-			span.red{
-			color: #FF6347;
-			}
-			
-			span.gray{
-			color: #999999;
-			position: relative;
-			bottom: 15px;
-			z-index: 1;
-			}
-			
-			li{
-			font-size: 17px;
-			}
-			
-			.logos{
-			padding: 2% 0%;
-			float: right;
-			height: 30%;
-			width: 15%;
-			object-fit: cover;
-			}
-			
-			img.left-logos {
-			width: clamp(60px, 10vw, 80px);
-			height: auto;
-			object-fit: contain;
-			}
-			
-			div.award-logo {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100px;
-			height: 100px;
-			margin-left: 10px;
-			margin-right: 20px;
-			overflow: hidden;
-			}
-			
-			div.contactpage{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			margin: 0.7rem;
-			}
-			
-			div.contact-header{
-			display:flex;
-			align-items: center;
-			justify-content: center;
-			margin: auto;
-			font-size: 6vh;
-			}
-			
-			h1.contact{
-			}
-			
-			div.contactpage-bottom{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			}
-			
-			div.form{
-			display: flex;
-			flex-direction: column;
-			height: auto;
-			width: 80%;
-			padding: 1% 2%;
-			background-color: #111827;
-			border-radius: 15px;
-			}
-			
-			div.labelform{
-			width: auto;
-			height: auto;
-			margin: 1%;
-			}
-			
-			label{
-			object-fit: cover;
-			font-size: 20px;
-			font-weight: bold;
-			color: white;
-			}
-			
-			input[type=text]{
-			padding: 2%;
-			border-radius: 10px;
-			width: 100%;
-			margin-bottom: 2%;
-			}
-			
-			input[type=email]{
-			padding: 2%;
-			width: 100%;
-			margin-bottom: 2%;
-			border-radius: 10px;
-			}
-			
-			input[placeholder]{
-			font-weight: bold;
-			font-size: 20px;
-			}
-			
-			div.message{
-			}
-			
-			textarea{
-			width: 100%;
-			}
-			
-			textarea[type=text]{
-			padding: 2%;
-			border-radius: 10px;
-			}
-			
-			textarea[placeholder]{
-			font-weight: bold;
-			font-size: 20px;
-			}
-			
-			#textarea{
-			padding-bottom: 40%;
-			}
-			
-			.submit{
-			display: inline-block;
-			border-radius: 8px;
-			padding: 2%;
-			color: white;
-			font-size: 1.25rem;
-			font-weight: bold;
-			background-color: #111827;
-			border: 2px solid white;
-			}
-			
-			div.section-container{
-			display: flex;
-			margin-right: 11%;
-			word-wrap: breakall;
-			}
-			
-			div.section{
-			display: flex;
-			height: 100%;
-			width: 50%;
-			height: auto;
-			word-wrap: break word;
-			}
-			
-			div.medium{
-			display: flex;
-			flex-direction: column;
-			}
-			
-			div.hobby-container{
-			display: inline-block;
-			border-radius: 20%;
-			border: 1px solid;
-			font-size: clamp(3vh,10vh,10vh);
-			padding: 0px 1rem;
-			background-color: #EEEEEE;
-			margin: auto;
-			overflow: hidden;
-			}
-			
-			span.icon{
-			color: black;
-			object-fit: cover;
-			}
-			
-			hr{
-			width: 100%;
-			margin-bottom: 5%;
-			}
-			
-			div.hobby-description{
-			text-align: center;
-			margin: 10% 0%;
-			}
-			
-			div.socialmedia{
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-evenly;
-			height: auto;
-			width: auto;
-			font-size: 0.7rem;
-			}
-			div.links{
-			display: inline-block;
-			align-items: center;
-			justify-content: center;
-			border-radius: 20%;
-			border: 1px solid;
-			color: black;
-			padding: 0.3rem 2rem;
-			overflow: hidden;
-			background-color: #67E4B3;
-			}
-			p.links{
-			display: inline-block;
-			font-weight: bold;
-			}
-			</style>
-		</head>
-		<body>
-			<div class ="top">
-					<div class ="leftside">
-						<a href="index.html#home">Home</a>
-						<a href="index.html#works">Projects</a>
-						<span style="word-spacing:3px;"><a href="aboutme.html">About Me</a></span>
-					</div>
-					<div class = "rightside">
-						<a href ="#contacts">Contacts</a>
-					</div>
-			</div>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      color: #111827;
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
 
-			<div class ="aboutmepage">
-				<div class ="image2">
-					<img src ="main/aboutme.png" id ="aboutme">
-				</div>
-				<div class ="aboutme-description">
-					<p class ="height" style ="font-size: 34px; font-weight: bold; padding-top: 20%;">
-					Hi I'm Keith Legaspi
-					</p>
-					<p class ="small">
-					A passionate and driven student, currently pursuing a 
-					Bachelor of Science in Computer Science with a STEM background.
-					</p>
-					<p class ="small">
-					Known for my adaptability and initiative, I thrive in collaborative environments and aim to turn 
-					my passion for tech into impactful solutions.
-					</p>
-				</div>
-			</div>
-			<div class ="achievements-container">
-				<div class ="achievements-header" id ="achievements">
-					Achievements
-				</div>
-			<div class ="section-container">
-				<div class ="section">
-					<div class ="descr-container">
-							<div class ="achievements-header">
-								<p class ="achievements-header">
-									Academic Awards
-								</p>
-							</div>
-						<hr>
-						<div class ="award-header">
-							<div class ="award-logo" style ="width: 40%;">
-								<img src ="main/logos/baste.png" class ="left-logos">
-							</div>
-							<div class ="medium">
-								<p class ="medium">
-									With High Honors
-								</p>
-								<p class ="subhead">
-									<span class ="gray">𖡡 San Sebastian College - Recoletos de Cavite (2024)</span>
-								</p>
-							</div>
-						</div>
-						<div class ="award-header">
-							<div class ="award-logo">
-								<img src ="main/logos/galilee.png" class ="left-logos">
-							</div>
-							<div class ="medium">
-								<p class ="medium">
-									With Honors
-								</p>
-								<p class ="subhead">
-									<span class ="gray">𖡡 Galilee Academy (2022)</span>
-								</p>
-							</div>
-						</div>
-						<div class ="award-header">
-							<div class ="award-logo">
-								<img src ="main/logos/sti.png" class ="left-logos">
-							</div>
-							<div class ="medium">
-								<p class ="medium">
-									Leadership Award
-								</p>
-								<p class ="subhead">
-									<span class ="gray">𖡡 Science Technology Institute (2020)</span>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class ="section">
-					<div class ="descr-container">
-						<div class ="achievements-header">
-							<p class ="achievements-header">
-								Hobbies & Interests
-							</p>
-						</div>
-						<hr>
-						<div class ="achievements-header" style ="display:flex; flex-direction: column;">
-							<div class ="hobby-container">
-								<span class ="icon">☄</span>
-							</div>
-							<div class ="hobby-description">
-								<p class ="medium">
-									Improving agility and reflexes through fast-paced 
-									badminton rallies and precise shuttle control.
-								</p>
-							</div>
-						</div>
-						<div class ="achievements-header" style ="display:flex; flex-direction: column;">
-							<div class ="hobby-container">
-								<span class ="icon">♫</span>
-							</div>
-							<div class ="hobby-description">
-								<p class ="medium">
-									Cultivating emotional expression and focus through daily 
-									music practice and creative performance.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				<br>
-				<br>
-				<div class ="descr-container">
-					<div class ="descr-header1">
-						<img src ="main/logos/baste.png" class ="logos">
-						<p class ="tahoma">
-						<span class ="red">San Sebastian College - Recoletos de Cavite</span>
-						</p>
-						<p class ="subhead">
-						<span class ="gray">𖡡 Cavite City, Cavite</span>
-						</p>
-						<p class ="medium">
-							Class President
-						</p>
-						<p class ="subhead">
-							<span class ="gray">🗓 August 2023 - June 2024</span>
-						</p>
-					</div>
-					
-					<div class ="body-container">
-						<ul>
-						<li>Event Coordination: Took the lead in organizing class-level events, including academic competitions, team-building activities, and student celebrations.</li>
-						<li>Representation & Leadership: Acted as the main liaison between the class and faculty, presenting concerns, suggestions, and updates during student council and faculty meetings.</li>
-						<li>Team Management: Encouraged collaboration among classmates and delegated tasks for project-based activities and event planning.</li>
-						<li>Communication & Documentation: Ensured timely communication of announcements, schedules, and academic reminders to classmates, and helped maintain order during events.</li>
-						</ul>
-					</div>
-				</div>
-				<br>
-				<br>
-				<div class ="descr-container">
-					<div class ="descr-header">
-						<img src ="main/logos/sti.png" class ="logos">
-						<p class ="tahoma">
-						<span class ="red">Science Technology Institute</span>
-						</p>
-						<p class ="subhead">
-						<span class ="gray">𖡡 Rosario, Cavite</span>
-						</p>
-						<p class ="medium">
-							Supreme Student Government Vice President
-						</p>
-						<p class ="subhead">
-							<span class ="gray">🗓 June 2019 - March 2020</span>
-						</p>
-					</div>
-					
-					<div class ="body-container">
-						<ul>
-						<li>Event Planning & Execution: Proposed and successfully hosted a Mobile Legends tournament.</li>
-						<li>Campus Cleanliness Initiative: Spearheaded a campus-wide cleanup drive.</li>
-						<li>Sustainable Development Projects: Initiated and implemented the development of a student-managed garden and a weather-resistant shelter.</li>
-						<li>Council Operations & Communication: Maintained records, drafted proposals, and delivered progress reports on student council projects to school administration and student body.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class ="contact-header">
-				<h1 style ="contact" id ="contacts">Contact Me</h1>
-			</div>
-			<div class ="contactpage">
-				<div class ="contactpage-bottom">
-					<div class ="form">
-						<form>
-						<div class ="labelform">
-							<label>Your Name</label>
-						</div>
-						<div class ="name">
-							<input type ="text" placeholder ="Enter Name"></input>
-						</div>
-						<div class ="labelform">
-							<label for="email">Your Email</label>
-						</div>
-						<div class ="name">
-							<input type ="email" placeholder ="Enter Email"></input>
-						</div>
-						<div class ="labelform">
-						<label>Your Topic</label>
-						</div>
-						<div class ="name">
-							<input type ="text" placeholder ="Enter Topic"></input>
-						</div>
-						<div class ="labelform">
-							<label>Your Message</label>
-						</div>
-						<div class ="message">
-							<textarea type ="text" placeholder ="Enter Message" id ="textarea"></textarea>
-						</div>
-						<div class ="message">
-							<input type ="submit" class ="submit" value ="Contact Me"></input>
-						</div>
-						</form>
-					</div>
-				</div>
-			</div>
-				<div class ="socialmedia">
-					<a href ="https://www.facebook.com/kitkitryan" target ="_blank">
-						<div class ="links">
-							<p class ="links">Facebook</p>
-						</div>
-					</a>
-					<a href ="https://www.instagram.com/kitkit.ryan/" target ="_blank">
-						<div class ="links">
-							<p class ="links">Instagram</p>
-						</div>
-					</a>
-			</div>
-		</body>
-	</html>
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ── Navbar ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      z-index: 100;
+    }
+
+    nav .nav-left {
+      display: flex;
+      gap: 40px;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* ── Hero / Intro ── */
+    .about-hero {
+      padding-top: 60px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .about-hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+      padding: 80px 80px 80px 64px;
+      width: 100%;
+    }
+
+    /* Photo placeholder */
+    .about-photo-wrap {
+      flex-shrink: 0;
+      width: 320px;
+      height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #e5e7eb;
+      border: 2px dashed #d1d5db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /*
+      HOW TO REPLACE THE PHOTO:
+      1. Drop your image file into the same folder as this file.
+      2. Replace the <img> src below with your filename, e.g. src="myphoto.jpg"
+      3. Remove or comment out the placeholder styles above if you like.
+      4. Adjust object-position (e.g. "top", "center", "50% 20%") to control crop.
+    */
+    .about-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top; /* ← adjust this to reposition */
+    }
+
+    .photo-placeholder-label {
+      position: absolute;
+      font-size: 13px;
+      font-weight: 600;
+      color: #9ca3af;
+      text-align: center;
+      padding: 0 16px;
+      pointer-events: none;
+    }
+
+    /* Hide label once real image is placed */
+    .about-photo-wrap img + .photo-placeholder-label {
+      display: none;
+    }
+
+    .about-intro {
+      flex: 1;
+    }
+
+    .about-intro .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+
+    .about-intro h1 {
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin-bottom: 28px;
+    }
+
+    .about-intro p {
+      font-size: 18px;
+      color: #374151;
+      line-height: 1.75;
+      max-width: 500px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Skills chips ── */
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .skill-chip {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      background-color: #f3f4f6;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* ── Experience section ── */
+    .experience-section {
+      padding: 88px 64px;
+      background-color: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 56px;
+    }
+
+    .exp-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .exp-card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 32px 36px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    .exp-card .exp-dot {
+      flex-shrink: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #111827;
+      margin-top: 8px;
+    }
+
+    .exp-card .exp-content {
+      flex: 1;
+    }
+
+    .exp-card .exp-org {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .exp-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .exp-card .exp-date {
+      font-size: 13px;
+      color: #9ca3af;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .exp-card p {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .exp-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .exp-card ul li {
+      font-size: 14px;
+      color: #6b7280;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .exp-card ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #d1d5db;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background-color: #111827;
+      color: #ffffff;
+      padding: 0 64px 40px;
+      border-top: 1px solid #1f2937;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 56px 0 40px;
+      border-bottom: 1px solid #374151;
+    }
+
+    .footer-brand h2 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 64px;
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 14px;
+      color: #d1d5db;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #ffffff;
+    }
+
+    .footer-col ul li span {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-left">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#works">Projects</a>
+      <a href="aboutme.html">About Me</a>
+    </div>
+  </nav>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
+
+      <!-- Photo -->
+      <div class="about-photo-wrap">
+        <img src="aboutme.png" alt="Keith Legaspi">
+        <span class="photo-placeholder-label">Drop your photo here<br>(replace aboutme.png)</span>
+      </div>
+
+      <div class="about-intro">
+        <p class="eyebrow">About Me</p>
+        <h1>Hi, I'm Keith Legaspi.</h1>
+        <p>
+          A passionate and driven Computer Science student at Cavite State University – CCAT Campus,
+          with a STEM background from San Sebastian College.
+        </p>
+        <p>
+          Known for adaptability and initiative, I thrive in collaborative environments and aim to turn
+          my passion for technology into impactful solutions.
+        </p>
+        <div class="skills-row">
+          <span class="skill-chip">HTML & CSS</span>
+          <span class="skill-chip">C++</span>
+          <span class="skill-chip">Video Editing</span>
+          <span class="skill-chip">Graphic Design</span>
+          <span class="skill-chip">Microsoft Office</span>
+          <span class="skill-chip">Leadership</span>
+          <span class="skill-chip">Communication</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience-section">
+    <p class="section-label">Organizational Experience</p>
+    <h2 class="section-title">Roles & Responsibilities</h2>
+
+    <div class="exp-cards">
+
+      <!-- PRO -->
+      <div class="exp-card">
+        <div class="exp-dot"></div>
+        <div class="exp-content">
+          <p class="exp-org">Computer Scientists and Developers Society · CvSU–CCAT</p>
+          <h3>Public Relations Officer</h3>
+          <p class="exp-date">January 2026 – June 2026</p>
+          <p>Managed the organization's communications, ensuring members remained informed and engaged in all activities.</p>
+          <ul>
+            <li>Coordinated communication between students, faculty members, and the organization.</li>
+            <li>Managed the organization's Facebook page and online community group.</li>
+            <li>Delivered announcements, event updates, and important organizational information.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Assistant Director -->
+      <div class="exp-card">
+        <div class="exp-dot"></div>
+        <div class="exp-content">
+          <p class="exp-org">Sikat E-Sports Club · CvSU–CCAT</p>
+          <h3>Assistant Director</h3>
+          <p class="exp-date">October 2025 – March 2026</p>
+          <p>Assisted the Director in overseeing organizational operations, event planning, and the implementation of initiatives.</p>
+          <ul>
+            <li>Led the Mobile Legends Campus Intramurals 2025 at CvSU-CCAT.</li>
+            <li>Organized the Orange Legends Cup, a Mobile Legends tournament in support of gender advocacy initiatives.</li>
+            <li>Coordinated with partner organizations for esports events and activities.</li>
+            <li>Spearheaded the development and distribution of the club's first official merchandise line.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Assistant Business Manager -->
+      <div class="exp-card">
+        <div class="exp-dot"></div>
+        <div class="exp-content">
+          <p class="exp-org">Computer Scientists and Developers Society · CvSU–CCAT</p>
+          <h3>Assistant Business Manager</h3>
+          <p class="exp-date">August 2025 – January 2026</p>
+          <p>Assisted in the administrative and operational functions of the organization, including documentation, communication, and organizational processes.</p>
+          <ul>
+            <li>Assisted in handling organizational paperwork and records.</li>
+            <li>Facilitated communication with administrative offices.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>Keith Ryan P. Legaspi</h2>
+        <p>Computer Science student</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#works">Projects</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><span>keithlegaspi02@gmail.com</span></li>
+            <li><span>09766263126</span></li>
+            <li><span>Cavite, Philippines</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Keith Ryan P. Legaspi. All rights reserved.</p>
+      <p>Built with HTML & CSS</p>
+    </div>
+  </footer>
+
+</body>
+</html>
